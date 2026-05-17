@@ -1,6 +1,7 @@
 "use client";
 
 import { Plus } from "lucide-react";
+import { JsonLd, faqPageSchema } from "@/components/JsonLd";
 
 const QA = [
   {
@@ -40,6 +41,7 @@ const QA = [
 export function FAQ() {
   return (
     <section id="faq" className="border-b border-border bg-background-muted py-24">
+      <JsonLd data={faqPageSchema(QA)} />
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center">
           <p className="text-xs font-medium uppercase tracking-widest text-accent">

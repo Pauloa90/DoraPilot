@@ -1,4 +1,5 @@
 import { ArticleHeader, Prose } from "@/components/Prose";
+import { JsonLd, articleSchema } from "@/components/JsonLd";
 import { POSTS } from "../posts";
 
 const post = POSTS.find((p) => p.slug === "aib-dora")!;
@@ -6,11 +7,13 @@ const post = POSTS.find((p) => p.slug === "aib-dora")!;
 export const metadata = {
   title: `${post.title} — DoraPilot`,
   description: post.excerpt,
+  alternates: { canonical: `/blog/${post.slug}` },
 };
 
 export default function Page() {
   return (
     <article className="mx-auto max-w-3xl px-6 py-14">
+      <JsonLd data={articleSchema(post)} />
       <ArticleHeader
         tag={post.tag}
         title={post.title}
