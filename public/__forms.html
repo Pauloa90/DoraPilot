@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--
+  Hidden static form used ONLY for Netlify Forms detection during build.
+  Netlify scans HTML files in /public for forms with data-netlify="true" and
+  provisions form receivers automatically. The actual user-facing form is
+  in components/Waitlist.tsx (client component) and submits to "/" with
+  the matching form-name field via URLSearchParams. Do NOT delete this file.
+-->
+<html>
+<head><title>Forms (internal)</title></head>
+<body>
+  <form name="waitlist" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="waitlist" />
+    <input type="hidden" name="bot-field" />
+    <input type="email" name="email" />
+    <input type="text" name="persona" />
+    <input type="text" name="submittedAt" />
+  </form>
+</body>
+</html>

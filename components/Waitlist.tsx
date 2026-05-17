@@ -16,15 +16,25 @@ export function Waitlist() {
     setError(null);
     setStatus("submitting");
 
+    // Submit to Netlify Forms: form-encoded POST to "/" with form-name field.
+    // The static form in public/__forms.html declares the schema; this
+    // submission matches it by name. Email notifications are configured in
+    // the Netlify dashboard under Forms → waitlist → Form notifications.
+    const body = new URLSearchParams({
+      "form-name": "waitlist",
+      email,
+      persona,
+      submittedAt: new Date().toISOString(),
+    });
+
     try {
-      const res = await fetch("/api/waitlist", {
+      const res = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, persona }),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
       });
       if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        throw new Error(body.error ?? `Server responded with ${res.status}`);
+        throw new Error(`Server responded with ${res.status}`);
       }
       setStatus("success");
       setEmail("");
@@ -61,9 +71,17 @@ export function Waitlist() {
           </div>
         ) : (
           <form
+            name="waitlist"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="mx-auto mt-10 max-w-lg space-y-3 text-left"
           >
+            <input type="hidden" name="form-name" value="waitlist" />
+            <p hidden>
+              <label>Don&apos;t fill this: <input name="bot-field" /></label>
+            </p>
             <div className="flex justify-center">
               <div className="inline-flex items-center gap-1 rounded-full border border-border bg-background p-1 text-xs">
                 {(["vendor", "entity"] as const).map((p) => (
@@ -89,6 +107,7 @@ export function Waitlist() {
               </label>
               <input
                 id="email"
+                name="email"
                 type="email"
                 required
                 value={email}
@@ -96,6 +115,7 @@ export function Waitlist() {
                 placeholder="you@yourcompany.io"
                 className="flex-1 rounded-md border border-border bg-background px-4 py-3 text-sm placeholder:text-foreground-subtle focus:border-accent focus:outline-none"
               />
+              <input type="hidden" name="persona" value={persona} />
               <button
                 type="submit"
                 disabled={status === "submitting"}
