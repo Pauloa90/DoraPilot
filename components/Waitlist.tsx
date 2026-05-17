@@ -28,7 +28,10 @@ export function Waitlist() {
     });
 
     try {
-      const res = await fetch("/", {
+      // POST to the static __forms.html (not "/") so Netlify Edge handles
+      // the submission directly. With Next.js + @netlify/plugin-nextjs,
+      // POSTs to "/" hit the Next.js server first and bypass Netlify Forms.
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: body.toString(),

@@ -1,18 +1,17 @@
 # Project: web
 
-**Last updated:** 2026-05-17 15:45 UTC
+**Last updated:** 2026-05-17 15:47 UTC
 **Path:** `C:\Users\paulo\Documents\DoraPilot\web`
-**Branch:** `main` (yes (uncommitted changes))
+**Branch:** `main` (clean)
 
 ## Where we stopped
 
-Site live em https://dorapilot.com. Deploy Netlify, HTTPS, sitemap submetido ao Google. Próximo: mais comparison pages + Netlify Forms para waitlist.
+_Última sessão Claude · 2026-05-17 15:47 UTC · 39 turnos_
 
-**Últimas mudanças (git):**
-
-- `2085d17` (2026-05-17) feat: llms.txt for AEO + /compare/sprinto-vs-dorapilot for SEO
-- `812de81` (2026-05-17) feat(seo): sitemap, robots, JSON-LD, landing metadata
-- `3f33898` (2026-05-17) feat: add blog, legal pages, Netlify config, README
+> F5 no HTML.
+> TL;DR:**
+> **Dashboard:** DoraPilot é agora o 19º projeto, hook automático configurado, STATUS.md gerado com tudo de hoje
+> **Form:** corrigido. Antes não enviava email porque não usava Netlify Forms. …
 
 ## Resume command
 
@@ -24,11 +23,11 @@ claude --dangerously-skip-permissions
 ## Recent commits
 
 ```
+112fc07 2026-05-17 fix(waitlist): use Netlify Forms instead of API route + register in dashboard
 2085d17 2026-05-17 feat: llms.txt for AEO + /compare/sprinto-vs-dorapilot for SEO
 812de81 2026-05-17 feat(seo): sitemap, robots, JSON-LD, landing metadata
 3f33898 2026-05-17 feat: add blog, legal pages, Netlify config, README
 70fc9bf 2026-05-17 Add DoraPilot landing page with waitlist and login scaffolding
-1765bcd 2026-05-17 Initial commit from Create Next App
 ```
 
 ---
