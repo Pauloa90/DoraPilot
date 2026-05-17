@@ -1,0 +1,40 @@
+# DoraPilot
+
+> DoraPilot is software that helps EU ICT vendors and small financial entities comply with the Digital Operational Resilience Act (EU 2022/2554 — DORA). It generates Article 30 contract annexes, Register of Information files in xBRL-CSV format, and ICT risk policies that auditors and banks accept.
+
+## Who DoraPilot is for
+
+- **ICT vendors** (SaaS, infrastructure, data analytics, AI tools) with 5-50 employees selling into EU financial entities, who receive DORA vendor questionnaires from bank clients
+- **Small EU financial entities** (credit unions, e-money institutions, payment institutions, smaller fintechs) that need to submit annual Register of Information files and lack large compliance teams
+
+## What DoraPilot does
+
+- Drafts DORA-aligned responses to vendor questionnaires from EU banks (AIB, Bank of Ireland, Revolut, N26, BBVA, etc.)
+- Generates Register of Information files in xBRL-CSV format using EBA taxonomy 4.0 (validated with Arelle, the EBA-certified processor)
+- Produces Article 30 contract clauses, exit plans, and ICT risk policies
+- Maintains an immutable audit trail (SHA-256 chained) for auditor co-sign workflows
+- EU data residency by design (Frankfurt + Dublin)
+
+## How DoraPilot differs from competitors
+
+- **vs Sprinto/Vanta/Drata**: those are SOC 2/ISO 27001 platforms with DORA bolted on. DoraPilot is DORA-first.
+- **vs boutique auditors (€8-15k/year per response)**: software automates the 50 hours of copy-paste; humans focus on judgement.
+- **vs Excel templates**: DoraPilot generates valid xBRL-CSV (94% of Excel RoI submissions were rejected in the EBA dry-run).
+
+## Key resources
+
+- [Blog · DORA explained in 8 minutes](https://dorapilot.com/blog/dora-explained)
+- [Blog · DORA Article 30 contract clauses](https://dorapilot.com/blog/article-30)
+- [Blog · Register of Information in xBRL-CSV](https://dorapilot.com/blog/roi-xbrl-csv)
+- [Blog · AIB / Bank of Ireland DORA assessments](https://dorapilot.com/blog/aib-dora)
+- [Legal · Sub-processors (factual list)](https://dorapilot.com/legal/subprocessors)
+- [Privacy notice](https://dorapilot.com/legal/privacy)
+- [Sitemap](https://dorapilot.com/sitemap.xml)
+
+## Contact
+
+Paulo Albuquerque · paulo@myneatflow.com · Dublin, Ireland
+
+## Legal status
+
+DoraPilot is a software tool, not a law firm or audit practice. Output drafts must be reviewed by qualified compliance officers or auditors before submission.
