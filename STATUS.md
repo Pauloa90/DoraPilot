@@ -1,17 +1,15 @@
 # Project: web
 
-**Last updated:** 2026-05-17 15:47 UTC
+**Last updated:** 2026-05-17 16:01 UTC
 **Path:** `C:\Users\paulo\Documents\DoraPilot\web`
-**Branch:** `main` (clean)
+**Branch:** `main` (yes (uncommitted changes))
 
 ## Where we stopped
 
-_Última sessão Claude · 2026-05-17 15:47 UTC · 39 turnos_
+_Última sessão Claude · 2026-05-17 16:01 UTC · 43 turnos_
 
-> F5 no HTML.
-> TL;DR:**
-> **Dashboard:** DoraPilot é agora o 19º projeto, hook automático configurado, STATUS.md gerado com tudo de hoje
-> **Form:** corrigido. Antes não enviava email porque não usava Netlify Forms. …
+> Boa. Form + email a funcionar end-to-end.
+> Recap do dia:** dorapilot.com live, GitHub repo + Netlify auto-deploy, HTTPS, sitemap no Google, 4 blog posts + 4 legais + 1 comparison, llms.txt para AEO, dashboard registado, …
 
 ## Resume command
 
@@ -23,11 +21,11 @@ claude --dangerously-skip-permissions
 ## Recent commits
 
 ```
+17ae206 2026-05-17 fix(waitlist): POST to /__forms.html so Netlify Edge intercepts
 112fc07 2026-05-17 fix(waitlist): use Netlify Forms instead of API route + register in dashboard
 2085d17 2026-05-17 feat: llms.txt for AEO + /compare/sprinto-vs-dorapilot for SEO
 812de81 2026-05-17 feat(seo): sitemap, robots, JSON-LD, landing metadata
 3f33898 2026-05-17 feat: add blog, legal pages, Netlify config, README
-70fc9bf 2026-05-17 Add DoraPilot landing page with waitlist and login scaffolding
 ```
 
 ---
