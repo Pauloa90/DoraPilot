@@ -34,11 +34,16 @@ yarn-error.log*
 .env
 .env*.local
 
-# vercel
+# vercel / netlify local artifacts
 .vercel
+.netlify
 
 # local data (waitlist signups before Supabase is wired)
 /.data
+
+# Claude Code session artifact (chat-latest.html is local-only,
+# never deploy our internal conversation to production)
+/public/chat-latest.html
 
 # typescript
 *.tsbuildinfo

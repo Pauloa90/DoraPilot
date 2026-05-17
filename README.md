@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DoraPilot
 
-## Getting Started
+Marketing site (and upcoming product) for **DORA compliance tooling** — helping small ICT vendors and SME EU financial entities respond to Article 30 questionnaires and generate Register of Information files in xBRL-CSV.
 
-First, run the development server:
+> Regulation reference: [EU 2022/2554 — Digital Operational Resilience Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech stack
+
+- **Next.js** 16.2.6 (App Router, Turbopack)
+- **React** 19.2.4
+- **Tailwind CSS** 4 (CSS variables + `@theme inline`)
+- **TypeScript** 5
+- **lucide-react** for icons
+- **Supabase** (planned, stubbed) for auth + persistence
+
+## Repository layout
+
+```
+.
+├── app/                  # App Router routes
+│   ├── api/waitlist/     # Waitlist signup endpoint
+│   ├── blog/             # 4 articles + index
+│   ├── legal/            # Privacy, Terms, DPA, Sub-processors
+│   ├── login/            # Login page (disabled until auth ships)
+│   ├── layout.tsx
+│   └── page.tsx          # Landing
+├── components/           # Shared React components
+├── lib/                  # Utilities (Supabase stub)
+├── public/               # Static assets
+└── netlify.toml          # Deploy config
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+# → http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Production build
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Auto-deployed to **Netlify** on push to `main`. Primary domain: **dorapilot.com**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Status
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pre-launch. Marketing site complete; product (auth, dashboard, questionnaire engine, RoI generator) under development. See `AGENTS.md` for in-repo notes.

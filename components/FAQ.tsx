@@ -69,8 +69,8 @@ export function FAQ() {
 
         <p className="mt-8 text-center text-sm text-foreground-muted">
           Other questions?{" "}
-          <a href="mailto:hello@dorapilot.eu" className="text-accent hover:underline">
-            hello@dorapilot.eu
+          <a href="mailto:paulo@myneatflow.com" className="text-accent hover:underline">
+            paulo@myneatflow.com
           </a>{" "}
           — typical reply within 12 hours, by a human.
         </p>

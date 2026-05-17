@@ -73,7 +73,7 @@ export function Solution() {
             <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
             <div className="ml-3 font-mono text-xs text-foreground-subtle">
-              app.dorapilot.eu / assessments / aib-2026-q2
+              app.dorapilot.com / assessments / aib-2026-q2
             </div>
           </div>
 

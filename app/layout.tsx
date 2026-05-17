@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   title: "DoraPilot — Reply to your bank's DORA assessment in hours, not weeks",
   description:
     "DoraPilot helps small ICT vendors and SME financial entities ship DORA-compliant answers, Register of Information files, and Article 30 contract annexes — drafted in minutes, reviewed by your auditor, ready for submission.",
-  metadataBase: new URL("https://dorapilot.eu"),
+  metadataBase: new URL("https://dorapilot.com"),
   openGraph: {
     title: "DoraPilot — DORA compliance for vendors and small banks",
     description:
       "Reply to your bank's DORA assessment in 2 hours, not 60. Generate Register of Information files in xBRL-CSV. Built for EU teams.",
-    url: "https://dorapilot.eu",
+    url: "https://dorapilot.com",
     siteName: "DoraPilot",
     locale: "en_GB",
     type: "website",
