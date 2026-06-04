@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Sign in — DoraPilot",
+  robots: { index: false, follow: true },
 };
 
 export default function LoginPage() {

@@ -3,6 +3,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Prose } from "@/components/Prose";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedLinks } from "@/components/RelatedLinks";
 import { Check, X, ArrowRight } from "lucide-react";
 
 export const metadata = {
@@ -315,6 +316,8 @@ export default function Page() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
+
+          <RelatedLinks exclude={["/compare/sprinto-vs-dorapilot"]} />
         </article>
       </main>
       <Footer />

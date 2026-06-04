@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-background py-12">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
               <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-accent text-[11px] font-bold text-white">
@@ -38,6 +38,15 @@ export function Footer() {
                 ["Article 30 guide", "/blog/article-30"],
                 ["RoI xBRL-CSV guide", "/blog/roi-xbrl-csv"],
                 ["AIB assessment guide", "/blog/aib-dora"],
+                ["Article 30 template", "/templates/dora-article-30"],
+              ],
+            },
+            {
+              title: "Compare",
+              links: [
+                ["vs Sprinto", "/compare/sprinto-vs-dorapilot"],
+                ["vs Vanta", "/compare/vanta-dora-alternative"],
+                ["vs Drata", "/compare/drata-vs-dorapilot"],
               ],
             },
             {
